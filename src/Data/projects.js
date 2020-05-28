@@ -25,7 +25,7 @@ const PROJECTS = [
         description: "This is a fun little page in this web site that fetches data using Spotify's api. User can search for any artist and listen to their top tracks.",
         image: project3,
         github: 'https://github.com/sanjay-gurung/music-master',
-        link: "https://sanjay-gurung.github.io/portfolio/#/music-master"
+        link: "https://sanjay-gurung.github.io/portfolio-old/#/music-master"
     }
 
 ]
