@@ -12,28 +12,33 @@ class Contact extends Component {
       messageError: ''
    })
 
-   sendMessage = (event) => {
+   async sendMessage(event) {
       this.setState({ loading: true });
       event.preventDefault();
-      
-      axios.post({
-         method: "POST",
-         url: "/api/form",
-         data: this.state,
-      }).then((response) => {
-         console.log('Message sent.', response);
-         this.setState({ 
-            messageSent: true,
-            loading: false 
-         });
-         this.resetForm()
-      }). catch((error) => {
-         console.log('Error: ', error );
-         this.setState({ 
-            messageError: true,
-            loading: false
-         });
-      })
+
+      const payload = {
+         name: this.state.name,
+         email: this.state.email,
+         subject: this.state.subject,
+         message: this.state.message
+      }
+
+      axios.post("https://sanjay-backend.herokuapp.com/api/form", payload)
+         .then((response) => {
+            console.log('Message sent.', response);
+            this.setState({ 
+               messageSent: true,
+               loading: false 
+            });
+            this.resetForm()
+         })
+         . catch((error) => {
+            console.log('Error: ', error );
+            this.setState({ 
+               messageError: true,
+               loading: false
+            });
+         })
    }
 
    resetForm = () => {
