@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Loader from '../Assets/loader.gif';
 
 class Contact extends Component {
    state = ({ 
@@ -68,12 +69,12 @@ class Contact extends Component {
                   <fieldset>
                      <div>
                         <label htmlFor="contactName">Name <span className="required">*</span></label>
-                        <input type="text" size="25" value={this.state.name} id="contactName" name="contactName" 
+                        <input type="text" size="25" value={this.state.name} id="contactName" name="contactName" required 
                            onChange={(event) => ( this.setState({ name: event.target.value }))} />
                      </div>
                      <div>
                         <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-                        <input type="text" value={this.state.email} size="35" id="contactEmail" name="contactEmail" 
+                        <input type="email" value={this.state.email} size="35" id="contactEmail" name="contactEmail" required
                            onChange={(event) => ( this.setState({ email: event.target.value }))}/>
                      </div>
                      <div>
@@ -83,13 +84,13 @@ class Contact extends Component {
                      </div>
                      <div>
                         <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                        <textarea cols="50" rows="10" value={this.state.message} id="contactMessage" name="contactMessage" 
+                        <textarea cols="50" rows="10" value={this.state.message} id="contactMessage" name="contactMessage" required
                            onChange={(event) => ( this.setState({ message: event.target.value }))} />
                      </div>
                      <div>
                         <button type="submit">Submit</button>
                         { 
-                           this.state.loading && <span className="image-loader"><img alt="" src="images loader.gif"/></span>
+                           this.state.loading && <span className="image-loader"><img alt="" src={Loader}/></span>
                         }
                      </div>
                   </fieldset>
