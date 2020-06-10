@@ -22,7 +22,7 @@ const PROJECTS = [
     {
         id: 3,
         title: "Music Master",
-        description: "This is a fun little application that I build in React that fetches data using Spotify's api. User can search for any artist and listen to their top tracks.",
+        description: "This is a fun little application that I built in React that fetches data using Spotify's api. User can search for any artist and listen to their top tracks.",
         image: project3,
         github: 'https://github.com/sanjay-gurung/music-master',
         link: "https://sanjay-gurung.github.io/portfolio-old/#/music-master"
