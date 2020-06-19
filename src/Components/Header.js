@@ -23,7 +23,7 @@ class Header extends Component {
          {/* <img className="profilePic" src={profilePic} alt="profile-pic"/> */}
          <div className="banner-text">
             <h1 className="responsive-headline">Sanjay Gurung</h1>
-            <h3><Typed strings={["I'm a <strong>Front End Developer</strong> looking forward to working on a fun and challanging project."]} typeSpeed={30} /></h3>
+            <h3><Typed strings={["I'm a <strong>Senior QA Engineer</strong> with an experience in Front End development looking forward to working on a fun and challanging project."]} typeSpeed={30} /></h3>
             <hr />
             <div>
                {  SOCIAL_PROFILES.map((socialProfile) => (
